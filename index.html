@@ -1477,57 +1477,76 @@ footer h4 {
         gap:10px;
     }
 /* =========================================
-   LIGHT BRINGER — PREMIUM BACKGROUND
+   LIGHT BRINGER — CINEMATIC BACKGROUND
 ========================================= */
 
 html {
-    background: #05070d;
+    background: #050505;
 }
 
 body {
-    background:
-        radial-gradient(circle at 50% 0%, rgba(40, 120, 255, 0.16), transparent 38%),
-        radial-gradient(circle at 10% 35%, rgba(212, 175, 55, 0.08), transparent 30%),
-        radial-gradient(circle at 90% 70%, rgba(40, 120, 255, 0.07), transparent 32%),
-        #05070d;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.42),
+            rgba(0, 0, 0, 0.58)
+        ),
+        url("background.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    background-color: #050505;
 
     position: relative;
     overflow-x: hidden;
 }
+
+/* Dark cinematic overlay */
 
 body::before {
     content: "";
     position: fixed;
     inset: 0;
 
-    background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-
-    background-size: 60px 60px;
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            transparent 0%,
+            rgba(0, 0, 0, 0.18) 45%,
+            rgba(0, 0, 0, 0.62) 100%
+        );
 
     pointer-events: none;
     z-index: 0;
 }
+
+/* Very subtle futuristic atmosphere */
 
 body::after {
     content: "";
     position: fixed;
-    width: 700px;
-    height: 700px;
-    left: 50%;
-    top: 5%;
-    transform: translateX(-50%);
+    inset: 0;
 
-    background: radial-gradient(
-        circle,
-        rgba(40, 120, 255, 0.08),
-        transparent 68%
-    );
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
 
     pointer-events: none;
     z-index: 0;
 }
+
+/* Keep website content above the background */
 
 body > * {
     position: relative;
