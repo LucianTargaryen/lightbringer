@@ -656,6 +656,35 @@ section{
 .contact-item:hover{
     color:var(--gold-light);
 }
+.connect-links{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:10px;
+}
+
+.connect-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 14px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    color:#bbb;
+    text-decoration:none;
+    transition:.25s ease;
+}
+
+.connect-item:hover{
+    color:var(--gold-light);
+    border-color:var(--gold);
+    transform:translateY(-2px);
+}
+
+.connect-icon{
+    font-size:18px;
+}
 
 /* =========================================================
    PORTAL MODAL
@@ -1773,33 +1802,41 @@ Start a conversation with Light Bringer.
 
 <h3>Connect With Us</h3>
 
-<a class="contact-item"
-href="https://wa.me/2349032327071"
-target="_blank">
-WhatsApp / Tel: +234 903 232 7071
-</a>
+<div class="connect-links">
 
-<a class="contact-item"
-href="mailto:lightbringer261@gmail.com">
-Email: lightbringer261@gmail.com
-</a>
+    <a class="connect-item"
+       href="https://wa.me/2349032327071"
+       target="_blank">
+        <span class="connect-icon">◉</span>
+        <span>WhatsApp</span>
+    </a>
 
-<a class="contact-item"
-href="https://www.linkedin.com/in/light-bringer-73746a374"
-target="_blank">
-LinkedIn
-</a>
+    <a class="connect-item"
+       href="mailto:lightbringer261@gmail.com">
+        <span class="connect-icon">✉</span>
+        <span>Email</span>
+    </a>
 
-<a class="contact-item"
-href="https://x.com/light_bringer64"
-target="_blank">
-X / Twitter
-</a>
+    <a class="connect-item"
+       href="https://www.linkedin.com/in/light-bringer-73746a374"
+       target="_blank">
+        <span class="connect-icon">in</span>
+        <span>LinkedIn</span>
+    </a>
 
-<div class="contact-item">
-Discord: light.system
+    <a class="connect-item"
+       href="https://x.com/light_bringer64"
+       target="_blank">
+        <span class="connect-icon">𝕏</span>
+        <span>X</span>
+    </a>
+
+    <div class="connect-item">
+        <span class="connect-icon">◈</span>
+        <span>Discord · light.system</span>
+    </div>
+
 </div>
-
 </div>
 
 
